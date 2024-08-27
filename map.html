@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Basic Meta Tags -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Meta Tags -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <!-- Site Meta Tags -->
+   <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icon -->
+   <link rel="icon" href="images/fevicon.png" type="image/png" />
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="style1.css" />
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css" />
+   <!-- Color CSS -->
+   <link rel="stylesheet" href="css/colors.css" />
+   <!-- Select Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap-select.css" />
+   <!-- Scrollbar CSS -->
+   <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css" />
+</head>
+<style>
+   /* Customize Topbar */
+   .topbar .navbar {
+      background-color: #ffffff; /* White background */
+   }
+
+   .topbar .navbar .icon_info ul li a i {
+      color: #000000; /* Black icons */
+   }
+
+   .topbar .navbar .dropdown-menu {
+      background-color: #ffffff; /* White dropdown background */
+   }
+
+   .topbar .navbar .dropdown-menu a {
+      color: #000000; /* Black dropdown text */
+   }
+
+   .topbar .navbar .dropdown-menu a:hover {
+      background-color: #f8f9fa; /* Light grey hover background */
+      color: #000000; /* Black hover text */
+   }
+
+   .logo_section img {
+      width: 100px; /* Set logo width */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: -9px;
+   }
+</style>
+<body class="dashboard dashboard_1">
+   <div class="full_container">
+      <div class="inner_container">
+         <!-- Sidebar -->
+         <nav id="sidebar">
+            <div class="sidebar_blog_1">
+               <div class="sidebar-header">
+                  <div class="logo_section">
+                     <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo.webp" alt="#" /></a>
+                  </div>
+               </div>
+               <div class="sidebar_user_info">
+                  <div class="icon_setting"></div>
+                  <div class="user_profle_side">
+                     <div class="user_img"><img class="img-responsive" src="images/layout_img/nv2.jpg" alt="#" /></div>
+                     <div class="user_info">
+                        <h6>Nguyễn Ngọc Thùy Trang</h6>
+                        <p><span class="online_animation"></span> Online</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sidebar_blog_2">
+               <h4>Tổng quan</h4>
+               <ul class="list-unstyled components">
+                  <li class="active">
+                     <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-dashboard yellow_color"></i> <span>Bảng điều khiển </span>
+                     </a>
+                     <ul class="collapse list-unstyled" id="dashboard">
+                        <li>
+                           <a href="dashboard.html">> <span>Bảng điều khiển mặc định</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Yếu tố</span></a>
+                     <ul class="collapse list-unstyled" id="element">
+                        <li><a href="invoice.html">> <span>Hóa đơn</span></a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="contact.html">
+                     <i class="fa fa-paper-plane red_color"></i> <span>Liên hệ</span></a>
+                  </li>
+                  <li class="active">
+                     <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Trang bổ sung</span></a>
+                     <ul class="collapse list-unstyled" id="additional_page">
+                        <li>
+                           <a href="login.html">> <span>Đăng nhập</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Bản đồ</span></a></li>
+                  <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Biểu đồ</span></a></li>
+               </ul>
+            </div>
+         </nav>
+         <!-- end sidebar -->
+         <!-- right content -->
+         <div id="content">
+            <!-- topbar -->
+            <div class="topbar">
+               <nav class="navbar navbar-expand-lg navbar-light">
+                  <div class="full">
+                     <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                     <div class="logo_section">
+                        <a href="index.html"><img class="img-responsive" src="images/logo/logo.webp" alt="#" /></a>
+                     </div>
+                     <div class="right_topbar">
+                        <div class="icon_info">
+                           <ul>
+                              <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                              <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                              <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                           </ul>
+                           <ul class="user_profile_dd">
+                              <li>
+                                 <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/nv2.jpg" alt="#" /><span class="name_user">Nguyễn Ngọc Thùy Trang</span></a>
+                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="profile.html">Hồ sơ</a>
+                                    <a class="dropdown-item" href="settings.html">Cài đặt</a>
+                                    <a class="dropdown-item" href="Help.html">Giúp</a>
+                                    <a class="dropdown-item" href="index.html"><span>Đăng xuất</span> <i class="fa fa-sign-out"></i></a>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+            <!-- end topbar -->
+            <!-- dashboard inner -->
+            <div class="midde_cont">
+               <div class="container-fluid">
+                  <div class="row column_title">
+                     <div class="col-md-12">
+                        <div class="page_title">
+                           <h2>Bảng đồ</h2>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="row column1">
+                     <div class="col-md-12">
+                        <div class="white_shd full margin_bottom_30">
+                           <div class="full graph_head">
+                              <div class="heading1 margin_0">
+                                 <h2>Bảng đồ <small>(Mặc định)</small></h2>
+                              </div>
+                           </div>
+                           <div class="map_section padding_infor_info">
+                              <div class="map m_style1">
+                                 <div id="map">
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.216087382043!2d106.67876667480516!3d10.794755289355153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d411c35277%3A0xcf96cde06627a938!2zRGVncmV5LnZuIC0gU8OgaSBHw7JuIC0gNDMgSHXhu7NuaCBWxINuIELDoW5oIFAuMTcgUS5QaMO6IE5odeG6rW4!5e0!3m2!1svi!2s!4v1710511122290!5m2!1svi!2s"
+                                        width="1000" height="600" 
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                                
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end row -->
+               </div>
+               <!-- footer -->
+            </div>
+            <!-- end dashboard inner -->
+         </div>
+      </div>
+   </div>
+
+   <!-- jQuery -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <!-- wow animation -->
+   <script src="js/animate.js"></script>
+   <!-- select country -->
+   <script src="js/bootstrap-select.js"></script>
+   <!-- owl carousel -->
+   <script src="js/owl.carousel.js"></script>
+   <!-- nice scrollbar -->
+   <script src="js/perfect-scrollbar.min.js"></script>
+   <!-- custom js -->
+   <script src="js/custom.js"></script>
+</body>
+</html>

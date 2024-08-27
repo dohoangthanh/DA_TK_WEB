@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÀI ĐẶT</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+        /* CSS cho trang cài đặt của admin */
+        body {
+            background-color: #f8f9fa;
+        }
+        .setting-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .setting-container h2 {
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+        .setting-form .form-group {
+            margin-bottom: 20px;
+        }
+        .setting-form label {
+            font-weight: bold;
+            color: #555;
+        }
+        .setting-form input[type="text"],
+        .setting-form input[type="email"],
+        .setting-form select {
+            border-radius: 20px;
+            background-color: #f3f4f6;
+            border: none;
+            color: #555;
+        }
+        .setting-form .btn-primary {
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        .setting-section {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .setting-section h4 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="setting-container">
+        <h2 style="font-weight: bold;">CÀI ĐẶT</h2>
+        <form class="setting-form">
+            <!-- Quản Lý Sản Phẩm -->
+            <div class="setting-section">
+                <h4>Quản Lý Sản Phẩm</h4>
+                <div class="form-group">
+                    <label for="inventory">Quản Lý Kho Hàng</label>
+                    <select class="form-control" id="inventory">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="category">Quản Lý Danh Mục</label>
+                    <select class="form-control" id="category">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Quản Lý Thẻ</label>
+                    <select class="form-control" id="tags">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Thanh Toán và Giao Hàng -->
+            <div class="setting-section">
+                <h4>Thanh Toán và Giao Hàng</h4>
+                <div class="form-group">
+                    <label for="payment-gateway">Cổng Thanh Toán</label>
+                    <input type="text" class="form-control" id="payment-gateway">
+                </div>
+                <div class="form-group">
+                    <label for="shipping-method">Phương Thức Giao Hàng</label>
+                    <input type="text" class="form-control" id="shipping-method">
+                </div>
+                <div class="form-group">
+                    <label for="delivery-time">Thời Gian Giao Hàng</label>
+                    <input type="text" class="form-control" id="delivery-time">
+                </div>
+            </div>
+
+            <!-- Tính Năng Bổ Sung -->
+            <div class="setting-section">
+                <h4>Tính Năng Bổ Sung</h4>
+                <div class="form-group">
+                    <label for="promotion">Chương Trình Khuyến Mãi</label>
+                    <input type="text" class="form-control" id="promotion">
+                </div>
+                <div class="form-group">
+                    <label for="wishlist">Danh Sách Yêu Thích</label>
+                    <select class="form-control" id="wishlist">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviews">Đánh Giá Sản Phẩm</label>
+                    <select class="form-control" id="reviews">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Chức Năng Quản Lý Người Dùng -->
+            <div class="setting-section">
+                <h4>Quản Lý Người Dùng</h4>
+                <div class="form-group">
+                    <label for="user-management">Quản Lý Tài Khoản Người Dùng</label>
+                    <select class="form-control" id="user-management">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roles">Phân Quyền Người Dùng</label>
+                    <select class="form-control" id="roles">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="analytics">Phân Tích Người Dùng</label>
+                    <select class="form-control" id="analytics">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Bảo Mật và Bảo Vệ -->
+            <div class="setting-section">
+                <h4>Bảo Mật và Bảo Vệ</h4>
+                <div class="form-group">
+                    <label for="password-policy">Chính Sách Mật Khẩu</label>
+                    <select class="form-control" id="password-policy">
+                        <option>Bật</option>
+                        <option>Tắt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="two-factor-authentication">Xác Minh Hai Yếu Tố</label>
+                    <select class="form-control" id
+                    ="two-factor-authentication">
+                    <option>Bật</option>
+                    <option>Tắt</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="backup-restore">Sao Lưu và Phục Hồi</label>
+                    <select class="form-control" id="backup-restore">
+                    <option>Bật</option>
+                    <option>Tắt</option>
+                    </select>
+                    </div>
+                    </div>        <!-- Tùy Chọn Giao Diện -->
+                    <div class="setting-section">
+                        <h4>Tùy Chọn Giao Diện</h4>
+                        <div class="form-group">
+                            <label for="theme">Chủ Đề</label>
+                            <select class="form-control" id="theme">
+                                <option>Giao Diện Mặc Định</option>
+                                <option>Giao Diện Tối</option>
+                                <option>Giao Diện Sáng</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Ngôn Ngữ</label>
+                            <select class="form-control" id="language">
+                                <option>Tiếng Việt</option>
+                                <option>English</option>
+                                <option>Français</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- Nút Lưu -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" onclick="redirectToAdmin()">Lưu Cài Đặt</button>
+                    </div>
+                    
+                    <script>
+                        function redirectToAdmin() {
+                            // Chuyển hướng sang trang admin.html
+                            window.location.href = "admin.html";
+                        }
+                    </script>
+                    
+                    
+            
+            <!-- jQuery -->
+            <script src="js/jquery.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="js/bootstrap.min.js"></script>
+            <!-- Custom JS -->
+            <script src="js/custom.js"></script>
+            

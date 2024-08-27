@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Hồ Sơ</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .profile-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+        }
+        .profile-info {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 20px; 
+            margin-left: 14px;
+        }
+        .profile-info h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .profile-info p {
+            color: #666;
+            margin-bottom: 10px;
+            margin-bottom: 20px;
+            margin-left: 35px; 
+        }
+        .edit-profile-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .edit-profile-btn button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-body img {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .modal-body .form-group {
+            text-align: left;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img" id="profileImg">
+        <div class="profile-info">
+            <center><h2><strong>Nguyễn Ngọc Thùy Trang</strong></h2></center>
+            <p><strong>Email:</strong> sst@gmail.com</p>
+            <p><strong>Điện thoại:</strong> 0398567819</p>
+            <p><strong>Địa chỉ:</strong> TP.HCM, Việt Nam</p>
+            <p><strong>Giới tính:</strong> Nữ</p>
+            <p><strong>Nghề nghiệp:</strong> Sale</p>
+            <p><strong>Ngày Sinh:</strong> 19/09/2004</p>
+            <p><strong>Sở thích:</strong> Nghe nhạc</p>
+            <p><strong>Chức vụ:</strong> Nhân viên</p>
+        </div>
+        <div class="edit-profile-btn">
+            <button type="button" data-toggle="modal" data-target="#editProfileModal">Sửa Hồ Sơ</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Sửa Hồ Sơ</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm">
+
+                        <div class="form-group text-center">
+                            <label for="profileImageUpload">Ảnh đại diện:</label>
+                            <input type="file" class="form-control-file" id="profileImageUpload" onchange="previewImage(event)">
+                            <img id="previewImg" src="default-image.jpg" alt="Preview Image">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Họ và Tên:</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nhập Họ và Tên">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Nhập Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Điện thoại:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Nhập Số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="address" placeholder="Nhập Địa chỉ">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Giới tính:</label>
+                            <select class="form-control" id="gender">
+                                <option>Nam</option>
+                                <option>Nữ</option>
+                                <option>Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="job">Nghề nghiệp:</label>
+                            <input type="text" class="form-control" id="job" placeholder="Nhập Nghề nghiệp">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Ngày sinh:</label>
+                            <input type="date" class="form-control" id="birthday">
+                        </div>
+                        <div class="form-group">
+                            <label for="hobbies">Sở thích:</label>
+                            <input type="text" class="form-control" id="hobbies" placeholder="Nhập Sở thích">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Chức vụ:</label>
+                            <input type="text" class="form-control" id="position" placeholder="Nhập Chức vụ">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+                        </div>
+                    </form>
+                </div
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    
+    function previewImage(event) {
+        var input = event.target;
+        var preview = document.getElementById('previewImg');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            preview.src = "default-image.jpg"; // Đặt lại ảnh mặc định nếu không có file nào được chọn
+        }
+    }
+
+    // Handle form submission
+    document.getElementById('editProfileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get the values from the form
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const gender = document.getElementById('gender').value;
+        const job = document.getElementById('job').value;
+        const birthday = document.getElementById('birthday').value;
+        const hobbies = document.getElementById('hobbies').value;
+        const position = document.getElementById('position').value;
+        
+        // Update the profile information
+        document.querySelector('.profile-info h2').innerText = fullName;
+        document.querySelector('.profile-info p:nth-child(2)').innerText = `Email: ${email}`;
+        document.querySelector('.profile-info p:nth-child(3)').innerText = `Điện thoại: ${phone}`;
+        document.querySelector('.profile-info p:nth-child(4)').innerText = `Địa chỉ: ${address}`;
+        document.querySelector('.profile-info p:nth-child(5)').innerText = `Giới tính: ${gender}`;
+        document.querySelector('.profile-info p:nth-child(6)').innerText = `Nghề nghiệp: ${job}`;
+        document.querySelector('.profile-info p:nth-child(7)').innerText = `Ngày Sinh: ${birthday}`;
+        document.querySelector('.profile-info p:nth-child(8)').innerText = `Sở thích: ${hobbies}`;
+        document.querySelector('.profile-info p:nth-child(9)').innerText = `Chức vụ: ${position}`;
+        
+        // Update profile image
+        const profileImg = document.getElementById('profileImg');
+        const previewImg = document.getElementById('previewImg');
+        if (previewImg.src !== 'https://via.placeholder.com/100') {
+            profileImg.src = previewImg.src;
+        }
+
+        // Hide the modal
+        $('#editProfileModal').modal('hide');
+    });
+</script>
+</body>
+</html>

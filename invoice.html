@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style1.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+   </head>
+   <style>
+                 /* Chỉnh sửa màu nền của topbar */
+                 .topbar .navbar {
+            background-color: #ffffff; /* Đặt màu nền thành trắng */
+         }
+
+         /* Chỉnh sửa màu của các biểu tượng trong topbar */
+         .topbar .navbar .icon_info ul li a i {
+            color: #000000; /* Đặt màu biểu tượng bạn muốn */
+         }
+
+         /* Chỉnh sửa màu của các phần tử trong dropdown menu */
+         .topbar .navbar .dropdown-menu {
+            background-color: #ffffff; /* Đặt màu nền thành trắng */
+         }
+
+         .topbar .navbar .dropdown-menu a {
+            color: #000000; /* Đặt màu văn bản trong dropdown menu */
+         }
+
+         .topbar .navbar .dropdown-menu a:hover {
+            background-color: #f8f9fa; /* Đặt màu nền khi hover */
+            color: #000000; /* Đặt màu văn bản khi hover */
+         }
+         .logo_section img 
+         {
+         width: 100px; /* Đặt chiều rộng bạn muốn */
+         height: auto; /* Đảm bảo tỷ lệ khung hình không bị méo */
+         margin-top: -9px;
+}
+   </style>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo.webp" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="images/layout_img/nv2.jpg" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>Nguyễn Ngọc Thùy Trang</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>Tổng quan</h4>
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Bảng điều khiển </span></a>
+                        <ul class="collapse list-unstyled" id="dashboard">
+                           <li>
+                              <a href="dashboard.html">> <span>Bảng điều khiển mặc định</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Yếu tố</span></a>
+                        <ul class="collapse list-unstyled" id="element">
+                           <li><a href="invoice.html">> <span>Hóa đơn</span></a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="contact.html">
+                        <i class="fa fa-paper-plane red_color"></i> <span>Liên hệ</span></a>
+                     </li>
+                     <li class="active">
+                        <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Trang bổ sung</span></a>
+                        <ul class="collapse list-unstyled" id="additional_page">
+                           <li>
+                              <a href="login.html">> <span>Đăng nhập</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Bản đồ</span></a></li>
+                     <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Biểu đồ</span></a></li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="logo_section">
+                           <a href="index.html"><img class="img-responsive" src="images/logo/logo.webp" alt="#" /></a>
+                        </div>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul>
+                                 <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                              </ul>
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/nv2.jpg" alt="#" /><span class="name_user">Nguyễn Ngọc Thùy Trang</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="profile.html">Hồ sơ</a>
+                                       <a class="dropdown-item" href="settings.html">Cài đặt</a>
+                                       <a class="dropdown-item" href="Help.html">Giúp</a>
+                                       <a class="dropdown-item" href="index.html"><span>Đăng xuất</span> <i class="fa fa-sign-out"></i></a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+                <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Hóa đơn</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row">
+                        <!-- Hóa đơn section -->
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2><i class="fa fa-file-text-o"></i> Hóa đơn</h2>
+                                 </div>
+                              </div>
+                              <div class="full">
+                                 <div class="Hóa đơn_inner">
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <div class="full Hóa đơn_blog padding_infor_info padding-bottom_0">
+                                             <h4>Từ</h4>
+                                             <p><strong>Trần Ngọc Mai</strong><br>  
+                                                Số 43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam<br> 
+                                                <strong>Phone : </strong><a href="">0123 242 453</a><br>  
+                                                <strong>Email : </strong><a href="">Maimai154@gmail.com</a>
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <div class="full Hóa đơn_blog padding_infor_info padding-bottom_0">
+                                             <h4>To</h4>
+                                             <p><strong>Lê Quốc Hoàng</strong><br>  
+                                                Số 456, Đường Trần Hưng Đạo, Quận Hoàn Kiếm, Thành phố Hà Nội, Việt Nam<br>
+                                                <strong>Phone : </strong><a href="">0983 531 536</a><br>  
+                                                <strong>Email : </strong><a href="">HoangLQ@gmail.com</a>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="full padding_infor_info">
+                                 <div class="table_row">
+                                    <div class="table-responsive">
+                                       <table class="table table-striped">
+                                          <thead>
+                                             <tr>
+                                                <th>Số</th>
+                                                <th>Sản Phẩm</th>
+                                                <th>Serial #</th>
+                                                <th>Miêu tả</th>
+                                                <th>Tổng cộng</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td>1</td>
+                                                <td> Degrey.Modmonks Tee Body mist Unisex Sweet Girl</td>
+                                                <td>005-475-321</td>
+                                                <td>Ghi Chú: Vui lòng giao hàng vào buổi sáng </td>
+                                                <td>129,000</td>
+                                             </tr>
+                                             <tr>
+                                                <td>2</td>
+                                                <td>Degrey.Modmonks Tee Hoodie Degrey Is Us - HDIS</td>
+                                                <td>015-475-321</td>
+                                                <td>Được kiểm tra hàng trước khi thanh toán </td>
+                                                <td>390,000</td>
+                                             </tr>
+                                             <tr>
+                                                <td>3</td>
+                                                <td>Áo Khoác Degrey Cardigan màu kem nâu - Car <br> Quần Jeans Skinny, Màu Xanh Đậm</td>
+                                                <td>025-475-321</td>
+                                                <td> Ghi Chú: Giao hàng trong giờ hành chính</td>
+                                                <td>890,000</td>
+                                             </tr>
+                                             <tr>
+                                                <td>4</td>
+                                                <td>Áo Khoác Bomber Unisex, Màu Đen</td>
+                                                <td>035-475-321</td>
+                                                <td>Ghi Chú: Vui lòng giao hàng trước 5 giờ chiều</td>
+                                                <td>779,000</td>
+                                             </tr>
+                                             <tr>
+                                                <td>5</td>
+                                                <td> Áo Thun Graphic Unisex, Màu Trắng</td>
+                                                <td>045-475-321</td>
+                                                <td>Ghi Chú: Vui lòng giao hàng vào buổi sáng</td>
+                                                <td>380,000</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="full white_shd">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Phương thức thanh toáns</h2>
+                                 </div>
+                              </div>
+                              <div class="full padding_infor_info">
+                                 <ul class="payment_option">
+                                    <li><img src="images/layout_img/visa.png" alt="#" /></li>
+                                    <li><img src="images/layout_img/mastercard.png" alt="#" /></li>
+                                    <li><img src="images/layout_img/american-express.png" alt="#" /></li>
+                                    <li><img src="images/layout_img/paypal.png" alt="#" /></li>
+                                 </ul>
+                                 <p class="note_cont">Nếu bạn thường xuyên sử dụng trang web này và muốn giữ cho trang web tiếp tục hoạt động trên Internet, hãy xem xét việc đóng góp để giúp duy trì trang.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="full white_shd">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Tổng cộng
+                                    </h2>
+                                 </div>
+                              </div>
+                              <div class="full padding_infor_info">
+                                 <div class="price_table">
+                                    <div class="table-responsive">
+                                       <table class="table">
+                                          <tbody>
+                                             <tr>
+                                                <th style="width:50%">Tổng cộng:</th>
+                                                <td>2,568,000</td>
+                                             </tr>
+                                             <tr>
+                                                <th>Thế (0.3%)</th>
+                                                <td>7,704</td>
+                                             </tr>
+                                             <tr>
+                                                <th>Phí vận chuyển:</th>
+                                                <td>35,000</td>
+                                             </tr>
+                                             <tr>
+                                                <th>Tổng cộng:</th>
+                                                <td>2,610,704</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- end dashboard inner -->
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+      <script src="js/owl.carousel.js"></script> 
+      <!-- chart js -->
+      <script src="js/Chart.min.js"></script>
+      <script src="js/Chart.bundle.min.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/analyser.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- fancy box js -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- calendar file css -->    
+      <script src="js/semantic.min.js"></script>
+   </body>
+</html>

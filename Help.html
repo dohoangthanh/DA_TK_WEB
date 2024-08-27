@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ Giúp - Mẫu Bảng Điều Khiển Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .help-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .help-section {
+            margin-bottom: 30px;
+        }
+        .accordion .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .accordion .card-header:hover {
+            background-color: #e9ecef;
+        }
+        .accordion .card-header button {
+            color: #343a40;
+        }
+        .accordion .card-body {
+            border-bottom: 1px solid #dee2e6;
+        }
+        .contact-form .form-control {
+            border-radius: 20px;
+        }
+        .contact-form .btn-primary {
+            border-radius: 20px;
+            padding: 12px 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="help-container">
+        <div class="help-header">
+            <h1>Trung Tâm Trợ Giúp</h1>
+            <p>Chào mừng đến với trung tâm trợ giúp. Tại đây bạn có thể tìm thấy câu trả lời cho các câu hỏi thường gặp và liên hệ với chúng tôi để được hỗ trợ thêm.</p>
+        </div>
+
+        <div class="help-section">
+            <h4>Câu Hỏi Thường Gặp</h4>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Làm thế nào để đặt lại mật khẩu?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Để đặt lại mật khẩu, hãy nhấp vào liên kết 'Quên Mật Khẩu' trên trang đăng nhập và làm theo hướng dẫn.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Làm thế nào để liên hệ với hỗ trợ khách hàng?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Bạn có thể liên hệ với hỗ trợ khách hàng qua email support@example.com hoặc gọi điện thoại (123) 456-7890.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Tôi có thể tìm thấy hướng dẫn sử dụng ở đâu?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Hướng dẫn sử dụng có thể được tải xuống từ phần 'Tài liệu' trên trang web của chúng tôi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help-section">
+            <h4>Liên Hệ</h4>
+            <form class="contact-form" action="submit_help_request.html" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tên" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Thông điệp" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

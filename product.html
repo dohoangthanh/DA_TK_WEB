@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      rel="icon"
+      href="./assets/image/icon-web1.png"
+      type="image"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/font/fontawesome-free-6.5.1-web/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.html" />
+    <link rel="stylesheet" href="productcontent.html" />
+     <link rel="stylesheet" href="reponsive.css">
+  </head>
+  <style>
+        .login-register 
+    {
+        position: absolute;
+        top: 10px; /* Điều chỉnh vị trí theo y */
+        right: calc(20px - 0.5cm); /* Cách giỏ hàng 1cm */
+    }
+
+    .login-register a 
+    {
+        text-decoration: none;
+        color: #000;
+        margin-right: 10px;
+    }
+
+    .login-register span 
+    {
+          margin-right: 10px;
+          color: #000;
+    }
+    .search-btn button {
+    display: none; /* Ẩn biểu tượng kính lúp */
+    }
+
+  </style>
+  <body>
+    <div id="Body">
+       <div id="header">
+            <div class="wrap-header" style="display: inline-flex">
+    
+             <!--reponsive icon menu-->
+              <input type="checkbox" id="check">
+              <label for="check" class="mobile-icons">
+                  <i class="ti-menu" id="menu-icon"></i>
+                  <i class="ti-close" id="close-icon"></i>
+              </label>
+      
+              <div>
+                <a href=""
+                  ><img class="logo" src="assets/image/logo.webp" alt=""
+                /></a>
+              </div>
+              <ul id="nav">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="product.html">Sản phẩm</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="Introduction.html">Giới thiệu</a></li>
+              </ul>
+              <div class="search-container">
+                <div class="search-btn">
+                  <button id="searchButton"><i class="ti-search"></i></button>
+                  <input type="text" id="searchInput" placeholder="Nhập sản phẩm tìm kiếm"/>
+                </div>
+                <div id="searchResults"></div>
+              </div>
+
+    
+              <!--reponsive search -->
+              <div class="mobile-search-btn">
+              <a href="#"> <i class="ti-search"></i></a>
+              </div>
+    
+    
+              <div class="buy-btn">
+                <a href="#"><i class="ti-shopping-cart"></i></a>
+                <span class="buy-text">Giỏ hàng</span>
+              </div>
+    
+               <!-- reponsive buy -->
+              <div class="mobile-buy-btn">
+                <a href="#"><i class="ti-shopping-cart"></i></a>
+              </div>
+              <div class="login-register">
+                <a href="login.html">Đăng nhập</a>
+                <span>/</span>
+                <a href="#">Đăng ký</a>
+            </div>
+            </div>
+          </div>
+
+       <div id="content">
+            <div id="title_1">
+              <a href="index.html">Trang chủ</a>
+              <a>/</a>
+              <a href="#">Tất cả sản phẩm</a>
+            </div>
+    
+           <div id="img1">
+            <img class="img1" src="product_img/cover_img.jpg" /><br />
+           </div>
+    
+          
+           <div class="all_product">
+            <div class="title_all_product">Tất cả sản phẩm</div>
+            <div class="dropdown">
+              <div class="sort" >
+                <p>Sắp xếp</p>
+                <i class="ti-angle-down"></i>
+              </div>
+              <div class="dropdown-content">
+                <ul class="cumulus">
+                  <li><a href="#" id="newest">Mới nhất</a></li>
+                  <li><a href="#">Giá : tăng dần</a></li>
+                  <li><a href="#">Tên : A - Z</a></li>
+                  <li><a href="#" id="bestseller">Bán chạy nhất</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+                    <div id="filter_title" onclick="toggleInfo('locgia');toggleInfo('mausac');toggleInfo('kichthuoc')">
+                      
+                      <div id="filtet_title_frame"> <i class="ti-filter"></i>Bộ lọc</div>
+                    </div>
+                    <div class="dropdown1" id="locgia">
+                      <p class="frame_title" >Lọc giá</p>
+                      <i class="ti-angle-down"></i>
+                      <div class="dropdown-content1">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox1"
+                                name="option"
+                                value="option1"
+                              />
+                              <label for="checkbox1"></label> Dưới 100.000đ</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox2"
+                                name="option"
+                                value="option2"
+                              />
+                              <label for="checkbox1"></label> 100.000đ - 200.000đ</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox3"
+                                name="option"
+                                value="option3"
+                              />
+                              <label for="checkbox1"></label> 250.000đ - 500.000đ</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox4"
+                                name="option"
+                                value="option4"
+                              />
+                              <label for="checkbox1"></label> 500.000đ - 800.000đ</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox5"
+                                name="option"
+                                value="option5"
+                              />
+                              <label for="checkbox1"></label> Trên 800.000đ</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                 
+                    <div class="dropdown1 color" id="mausac">
+                      <p class="frame_title">Màu Sắc</p>
+                      <i class="ti-angle-down"></i>
+                      <div class="dropdown-content1">
+                        <ul>
+                          <li><div class="circle violet"></div></li>
+                          <li><div class="circle yellow"></div></li>
+                          <li><div class="circle orange"></div></li>
+                          <li><div class="circle pink"></div></li>
+                          <li><div class="circle black"></div></li>
+                          <li><div class="circle grey"></div></li>
+                          <li><div class="circle white"></div></li>
+                          <li><div class="circle red"></div></li>
+                          <li><div class="circle green"></div></li>
+                          <li><div class="circle green-yellow"></div></li>
+                        </ul>
+                      </div>
+                    </div>
+        
+                
+      
+               
+                    <div class="dropdown2" id="kichthuoc">
+                      <div class="frame_title">Kích Thước</div>
+                      <i class="ti-angle-down"></i>
+                      <div class="dropdown-content2">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox1"
+                                name="option"
+                                value="option1"
+                              />
+                              <label for="checkbox1"></label> S</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox2"
+                                name="option"
+                                value="option2"
+                              />
+                              <label for="checkbox1"></label> M</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox3"
+                                name="option"
+                                value="option3"
+                              />
+                              <label for="checkbox1"></label> L</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#">
+                              <input
+                                type="checkbox"
+                                id="checkbox4"
+                                name="option"
+                                value="option4"
+                              />
+                              <label for="checkbox1"></label> XL</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+    
+           
+    
+            <div class="dashboard">
+              <div id="productInfo">
+                <!-- sẩn phẩm 1 -->
+                  <a href="#">
+                    <div id="product">
+                      <div class="product_content" data-id="1">
+                        <div class="product_img_hover">
+                          <img
+                            id="product_img"
+                            src="product_img/product_1.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="hover_img"
+                            id="product_img"
+                            src="product_img/product_1.1.jpg"
+                            alt=""
+                          />
+                        </div>
+      
+                        <div id="text">
+                          Degrey.Modmonks Tee <br />Vietnam 84 Đỏ DV84 Đỏ
+                          <div id="price">
+                            290,000<u>đ</u>
+                            <span id="discount">440,000<u>đ</u></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+      
+                <!-- sẩn phẩm 2 -->
+                  <a href="#">
+                    <div id="product">
+                      <div class="product_content" data-id="2">
+                        <div class="product_img_hover">
+                          <img
+                            id="product_img"
+                            src="product_img/product_2.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="hover_img"
+                            id="product_img"
+                            src="product_img/product_2.1.jpg"
+                            alt=""
+                          />
+                        </div>
+      
+                        <div id="text">
+                          Degrey.Modmonks Tee <br />áo thun thời trang
+                          <div id="price">
+                            340,000<u>đ</u>
+                            <span id="discount">350,000<u>đ</u></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+              
+      
+                <!-- sản phẩm 3 -->
+              
+                  <a href="#">
+                    <div id="product">
+                      <div class="product_content" data-id="3">
+                        <div class="product_img_hover">
+                          <img
+                            id="product_img"
+                            src="product_img/product_3.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="hover_img"
+                            id="product_img"
+                            src="product_img/product_3.1.jpg"
+                            alt=""
+                          />
+                        </div>
+      
+                        <div id="text">
+                          Degrey.Modmonks Tee Body <br />mist Unisex Sweet Girl
+                          <div id="price">
+                            129,000<u>đ</u>
+                            <span id="discount">250,000<u>đ</u></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            
+      
+                <!-- sản phẩm 4-->
+              
+                  <a href="#">
+                    <div id="product">
+                      <div class="product_content" data-id="4">
+                        <div class="product_img_hover">
+                          <img
+                            id="product_img"
+                            src="product_img/product_4.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="hover_img"
+                            id="product_img"
+                            src="product_img/product_4.1.jpg"
+                            alt=""
+                          />
+                        </div>
+      
+                        <div id="text">
+                          Degrey.Modmonks Tee <br />Hoodie Degrey Is Us - HDIS
+                          <div id="price">
+                            390,000<u>đ</u>
+                            <span id="discount">480,000<u>đ</u></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+               
+      
+                <!-- sản phẩm 5 -->
+              
+                  <a href="#">
+                    <div id="product">
+                      <div class="product_content" data-id="5">
+                        <div class="product_img_hover">
+                          <img
+                            id="product_img"
+                            src="product_img/product_5.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="hover_img"
+                            id="product_img"
+                            src="product_img/product_5.1.jpg"
+                            alt=""
+                          />
+                        </div>
+      
+                        <div id="text">
+                          Degrey.Modmonks Tee Body <br />mist Nam Nữ Unisex
+                          <div id="price">
+                            129,000<u>đ</u>
+                            <span id="discount">250,000<u>đ</u></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div> 
+    
+                  <div id="productInfo2">
+                    <!-- sản phẩm 6 -->
+                <a href="#">
+                  <div id="product">
+                    <div class="product_content" data-id="6">
+                      <div class="product_img_hover">
+                        <img
+                          id="product_img"
+                          src="product_img/product_6.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="hover_img"
+                          id="product_img"
+                          src="product_img/product_6.1.jpg"
+                          alt=""
+                        />
+                      </div>
+      
+                      <div id="text">
+                        Áo Khoác Degrey Cardigan<br />màu kem nâu - Car
+                        <div id="price">
+                          450,000<u>đ</u>
+                          <span id="discount">480,000<u>đ</u></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              <!-- sản phẩm 7 -->
+                <a href="#">
+                  <div id="product">
+                    <div class="product_content" data-id="7">
+                      <div class="product_img_hover">
+                        <img
+                          id="product_img"
+                          src="product_img/product_7.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="hover_img"
+                          id="product_img"
+                          src="product_img/product_7.1.jpg"
+                          alt=""
+                        />
+                      </div>
+      
+                      <div id="text">
+                        Degrey Leather Basic Balo<br />Kem Samll Size - LBBMK
+                        <div id="price">
+                          380,000<u>đ</u>
+                          <span id="discount">390,000<u>đ</u></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              <!-- sản phẩm 8 -->
+                <a href="#">
+                  <div id="product">
+                    <div class="product_content" data-id="8">
+                      <div class="product_img_hover">
+                        <img
+                          id="product_img"
+                          src="product_img/product_8.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="hover_img"
+                          id="product_img"
+                          src="product_img/product_8.1.jpg"
+                          alt=""
+                        />
+                      </div>
+      
+                      <div id="text">
+                        (White Moment) Balo Da<br />Degrey 2 Ngăn Big Logo -
+                        BWM
+                        <div id="price">
+                          490,000<u>đ</u>
+                          <span id="discount">500,000<u>đ</u></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              <!-- sản phẩm 9 -->
+                <a href="#">
+                  <div id="product">
+                    <div class="product_content" data-id="9">
+                      <div class="product_img_hover">
+                        <img
+                          id="product_img"
+                          src="product_img/product_9.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="hover_img"
+                          id="product_img"
+                          src="product_img/product_9.1.jpg"
+                          alt=""
+                        />
+                      </div>
+      
+                      <div id="text">
+                        Degrey Leather ToteBook <br />Kem - DLTK
+                        <div id="price">
+                          350,000<u>đ</u>
+                          <span id="discount">450,000<u>đ</u></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              <!-- sản phẩm 10 -->
+                <a href="#">
+                  <div id="product">
+                    <div class="product_content" data-id="10">
+                      <div class="product_img_hover">
+                        <img
+                          id="product_img"
+                          src="product_img/product_10.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="hover_img"
+                          id="product_img"
+                          src="product_img/product_10.1.jpg"
+                          alt=""
+                        />
+                      </div>
+      
+                      <div id="text">
+                        Hoodie Degrey Is Us Kem<br />HDIS
+                        <div id="price">
+                          380,000<u>đ</u>
+                          <span id="discount">490,000<u>đ</u></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>  
+                  </div>
+        
+      <div id="productInfo1" style="display: none;" >
+        <a href="#">
+          <div id="product">
+            <div class="product_content" data-id="11">
+              <div class="product_img_hover">
+                <img
+                  id="product_img"
+                  src="product_img/product_11.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover_img"
+                  id="product_img"
+                  src="product_img/product_11.1.jpg"
+                  alt=""
+                />
+              </div>
+    
+              <div id="text">
+                Túi đeo chéo Degrey Coffee<br />Simili Bag màu Kem
+                nâu
+                <div id="price">
+                  320,000<u>đ</u>
+                  <span id="discount">350,000<u>đ</u></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      <!-- sản phẩm 12 -->
+        <a href="#">
+          <div id="product">
+            <div class="product_content" data-id="12">
+              <div class="product_img_hover">
+                <img
+                  id="product_img"
+                  src="product_img/product_12.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover_img"
+                  id="product_img"
+                  src="product_img/product_12.1.jpg"
+                  alt=""
+                />
+              </div>
+    
+              <div id="text">
+                Cặp Degrey simili có quai<br />đeo kiểu Nhật - CAPS
+                <div id="price">
+                  430,000<u>đ</u>
+                  <span id="discount">500,000<u>đ</u></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      <!-- sản phẩm 13 -->
+        <a href="#">
+          <div id="product">
+            <div class="product_content" data-id="13">
+              <div class="product_img_hover">
+                <img
+                  id="product_img"
+                  src="product_img/product_13.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover_img"
+                  id="product_img"
+                  src="product_img/product_13.1.jpg"
+                  alt=""
+                />
+              </div>
+    
+              <div id="text">
+                Degrey.Madmonks Pockets<br />Short-Sleeved Black
+                Shirt - DMPS
+                <div id="price">
+                  290,000<u>đ</u>
+                  <span id="discount">450,000<u>đ</u></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+    
+      <!-- sản phẩm 14 -->
+        <a href="#">
+          <div id="product">
+            <div class="product_content" data-id="14">
+              <div class="product_img_hover">
+                <img
+                  id="product_img"
+                  src="product_img/product_14.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover_img"
+                  id="product_img"
+                  src="product_img/product_14.1.jpg"
+                  alt=""
+                />
+              </div>
+    
+              <div id="text">
+                Degrey.Madmonks Black<br />
+                Mamba skinny - DMMP
+                <div id="price">
+                  580,000<u>đ</u>
+                  <span id="discount">600,000<u>đ</u></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+    
+      <!-- sản phẩm 15 -->
+        <a href="#">
+          <div id="product">
+            <div class="product_content" data-id="15">
+              <div class="product_img_hover">
+                <img
+                  id="product_img"
+                  src="product_img/product_15.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover_img"
+                  id="product_img"
+                  src="product_img/product_15.1.jpg"
+                  alt=""
+                />
+              </div>
+    
+              <div id="text">
+                Dép da Degrey quai ngang đế cao<br />su thời trang
+                unisex - DEP
+                <div id="price">
+                  550,000<u>đ</u>
+                  <span id="discount">700,000<u>đ</u></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <button id="showMoreButton">Xem thêm sản phẩm</button>
+        </div>
+      </div>
+ 
+
+      <div id="footer">
+            <div class="footer-content">
+              <div class="row">
+                <!--reponsive -->
+                <div class="time-word ">
+                  <div class="left-tw ">
+                      <p>Bán hàng 9:00 - 22:00</p>  
+                      <a href=""><i
+                         class="fa-solid fa-phone-volume"
+                      ></i>03363111117</a>
+                  </div>
+                  
+                  <div class="mid-tw">
+                      <p>Khiếu nại 9:00 - 21:30</p>  
+                      <a href=""><i
+                        class="fa-solid fa-phone-volume"
+                      ></i>0775913335</a>
+                  </div>
+                  <div class="right-tw" onclick="toggleInfo('introducing_dg');toggleInfo('client-support');toggleInfo('client-care')">
+                      <p>Xem thêm<br> Thông tin</p>
+                      <a href=""><i  class="ti-angle-down"></i></a>
+                   </div>
+                </div>
+    
+                <div class="introducing_dg"  id="introducing_dg" onclick="toggleInfo('about');toggleInfo('address')"><p>Về DEGREY</p>  </div>
+                <div class="padding-15 about content" id="about">
+                  <h4 >Về DEGREY</h4>
+                  <p>
+                    Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi
+                    ngày u buồn về sự nghiệp, tương lai trong quá khứ của chính
+                    mình” – theo lời chia sẻ của Degrey’s founder.
+                  </p>
+                  <p><b>CÔNG TY TNHH DEGREY</b></p>
+                  <p>0315986019 cấp ngày 31/10/2019 tại Sở kế hoạch đầu tư TPHCM</p>
+                  <div class="certifi-btn">
+                    <a href="#">
+                      <img
+                        src="assets/image/certification.webp"
+                        alt="certification"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="padding-15 address " id="address">
+                  <h4>Địa chỉ</h4>
+                  <p><b>Sài Gòn:</b> 43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận</p>
+                  <p><b>Điện thoại:</b> 0336311117</p>
+                  <p><b>Email:</b> degrey.vn@gmail.com</p>
+                </div>
+            
+    
+                <div class="client-support"  id="client-support" onclick="toggleInfo('support')"> <p>Hỗ trợ khách hàng</p>  </div>
+                <div class="padding-15 support" id="support">
+                  <h4>Hỗ trợ khách hàng</h4>
+                  <ul>
+                    <li><a href="Introduction.html">Giới thiệu Degrey</a></li>
+                    <li><a href="store.html">Hệ thống cửa hàng</a></li>
+                    <li><a href="order-turtorial.html">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="#">Chính sách và quy định</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Thông tin sở hữu</a></li>
+                  </ul>
+                </div>
+            
+    
+                <div class="client-care"  id="client-care" onclick="toggleInfo('care')"> <p>Chăm sóc khách hàng</p></div>
+                <div class="padding-15 care" id="care">
+                  <h4>Chăm sóc khách hàng</h4>
+                  <div class="phone-contact">
+                    <div class="icon-phone">
+                      <i
+                        class="fa-solid fa-phone-volume"
+                        style="color: #ffffff"
+                      ></i>
+                    </div>
+                    <div class="number-phone">
+                      <p>0336311117</p>
+                      <p>degrey.vn@gmail.com</p>
+                    </div>
+                  </div>
+                  <h4>Follow Us</h4>
+                  <div class="social-btn">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="ti-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-google"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="ti-youtube"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="footer-copy">
+                <p>Copyright © 2024 DEGREY VIETNAM. Powered by Haravan</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+   <script>
+      // reponsive
+            function toggleInfo(id) {
+            var info_footer = document.getElementById(id);
+            info_footer.classList.toggle('show');
+            if (info_footer.classList.contains('show')) {
+              info_footer.style.height = info_footer.scrollHeight + 'px';
+            } else {
+              info_footer.style.height = 0;
+            }
+        }
+          
+      document.addEventListener("DOMContentLoaded", function () {
+        var circles = document.querySelectorAll(".circle");
+        circles.forEach(function (circle) {
+          circle.addEventListener("click", function () {
+            if (!this.classList.contains("active")) {
+              this.classList.add("active");
+            } else {
+              this.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var cumulusItems = document.querySelectorAll(".cumulus > li");
+        cumulusItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            event.preventDefault();
+            if (this.classList.contains("active")) {
+              this.classList.remove("active");
+            } else {
+              var activeItem = document.querySelector(".cumulus > li.active");
+              if (activeItem) {
+                activeItem.classList.remove("active");
+              }
+              this.classList.add("active");
+            }
+          });
+        });
+      });
+
+      const products = document.querySelectorAll(".product_content");
+      products.forEach((product) => {
+        product.addEventListener("click", function () {
+          const productId = this.getAttribute("data-id");
+          window.location.href = `product_content.html?id=${productId}`;
+        });
+      });
+
+      document.getElementById("showMoreButton").addEventListener("click", function () {
+  var productInfo1 = document.getElementById("productInfo1");
+  if (productInfo1.style.display === "none") {
+    productInfo1.style.display = "block";
+    this.innerText = "Thu gọn sản phẩm";
+  } else {
+    productInfo1.style.display = "none";
+    this.innerText = "Xem thêm sản phẩm";
+  }
+});
+//tìm kiếm sản phẩm không phân biệt chữ hoa thường
+        // Bắt sự kiện click vào nút tìm kiếm
+        document.getElementById('searchButton').addEventListener('click', function() {
+            search();
+        });
+
+        // Bắt sự kiện nhấn phím trong ô tìm kiếm
+        document.getElementById('searchInput').addEventListener('input', function() {
+            search();
+        });
+
+        // Hàm tìm kiếm
+
+        function search() {
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            var products = document.querySelectorAll('.product_content');
+
+            products.forEach(function(product) {
+                var productText = product.querySelector('#text').textContent.toLowerCase();
+                var productContainer = product.parentElement;
+
+                if (productText.includes(searchTerm)) {
+                    productContainer.style.display = 'block'; // Hiển thị sản phẩm nếu chứa từ khóa tìm kiếm
+                } else {
+                    productContainer.style.display = 'none'; // Ẩn sản phẩm nếu không chứa từ khóa tìm kiếm
+                }
+            });
+        }
+        //SẮP XẾP SẢN PHẨM
+       
+    // LỌC GIÁ 
+    document.addEventListener("DOMContentLoaded", function () {
+        var priceCheckboxes = document.querySelectorAll('input[name="option"]');
+        var allProducts = document.querySelectorAll(".product_content");
+
+        priceCheckboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                filterProductsByPrice();
+            });
+        });
+
+        function filterProductsByPrice() {
+            var checkedPriceOptions = Array.from(priceCheckboxes).filter(function (checkbox) {
+                return checkbox.checked;
+            }).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            allProducts.forEach(function (product) {
+                var productPrice = parseFloat(product.querySelector("#price").innerText.replace("đ", "").replace(",", "").trim());
+
+                if (checkedPriceOptions.length === 0) {
+                    product.style.display = "block"; // Hiển thị tất cả sản phẩm nếu không có mức giá được chọn
+                } else {
+                    if (checkedPriceOptions.includes("option1") && productPrice < 100000) {
+                        product.style.display = "block";
+                    } else if (checkedPriceOptions.includes("option2") && productPrice >= 100000 && productPrice <= 200000) {
+                        product.style.display = "block";
+                    } else if (checkedPriceOptions.includes("option3") && productPrice >= 250000 && productPrice <= 500000) {
+                        product.style.display = "block";
+                    } else if (checkedPriceOptions.includes("option4") && productPrice >= 500000 && productPrice <= 800000) {
+                        product.style.display = "block";
+                    } else if (checkedPriceOptions.includes("option5") && productPrice > 800000) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none"; // Ẩn sản phẩm nếu không khớp với mức giá đã chọn
+                    }
+                }
+            });
+        }
+    });
+    // sắp xếp màu sắc 
+   // Lấy circle màu đen
+var blackCircle = document.querySelector('.circle.black');
+
+// Thêm sự kiện click cho circle màu đen
+blackCircle.addEventListener('click', function() {
+    // Lấy danh sách các sản phẩm
+    var productsList = document.querySelectorAll('.product_content');
+
+    // Duyệt qua từng sản phẩm để kiểm tra và hiển thị sản phẩm thích hợp
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase(); // Lấy tên sản phẩm và chuyển thành chữ thường
+
+        console.log(productName); // In ra tên sản phẩm để kiểm tra
+
+        // Kiểm tra xem tên sản phẩm có chứa từ khóa "đen" hoặc "black" không
+        if (productName.includes('đen') || productName.includes('black')) {
+            // Hiển thị sản phẩm
+            product.style.display = 'block';
+        } else {
+            // Ẩn sản phẩm không phù hợp
+            product.style.display = 'none';
+        }
+    });
+});
+    
+    // Lấy circle màu trắng
+var whiteCircle = document.querySelector('.circle.white');
+
+// Thêm sự kiện click cho circle màu trắng
+whiteCircle.addEventListener('click', function() {
+    // Lấy danh sách các sản phẩm
+    var productsList = document.querySelectorAll('.product_content');
+
+    // Duyệt qua từng sản phẩm để kiểm tra và hiển thị sản phẩm thích hợp
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase(); // Lấy tên sản phẩm và chuyển thành chữ thường
+
+        console.log(productName); // In ra tên sản phẩm để kiểm tra
+
+        // Kiểm tra xem tên sản phẩm có chứa từ khóa "kem", "white" hoặc "trắng" không
+        if (productName.includes('kem') || productName.includes('white') || productName.includes('trắng')) {
+            // Hiển thị sản phẩm
+            product.style.display = 'block';
+        } else {
+            // Ẩn sản phẩm không phù hợp
+            product.style.display = 'none';
+        }
+       
+    });
+});
+// lọc màu đỏ 
+var redCircle = document.querySelector('.circle.red');
+
+// Thêm sự kiện click cho circle màu đỏ
+redCircle.addEventListener('click', function() {
+    // Lấy danh sách các sản phẩm
+    var productsList = document.querySelectorAll('.product_content');
+
+    // Duyệt qua từng sản phẩm để kiểm tra và hiển thị sản phẩm thích hợp
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase(); // Lấy tên sản phẩm và chuyển thành chữ thường
+
+        console.log(productName); // In ra tên sản phẩm để kiểm tra
+
+        // Kiểm tra xem tên sản phẩm có chứa từ khóa "đỏ" hoặc "red" không
+        if (productName.includes('đỏ') || productName.includes('red')) {
+            // Hiển thị sản phẩm
+            product.style.display = 'block';
+        } else {
+            // Ẩn sản phẩm không phù hợp
+            product.style.display = 'none';
+        }
+    });
+});
+//
+// Lọc sản phẩm khi nhấp vào circle màu violet
+var violetCircle = document.querySelector('.circle.violet');
+violetCircle.addEventListener('click', function() {
+    var productsList = document.querySelectorAll('.product_content');
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase();
+        if (productName.includes('violet') || productName.includes('tím')) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});
+// Lọc sản phẩm khi nhấp vào circle màu yellow
+var yellowCircle = document.querySelector('.circle.yellow');
+yellowCircle.addEventListener('click', function() {
+    var productsList = document.querySelectorAll('.product_content');
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase();
+        if (productName.includes('yellow') || productName.includes('vàng')) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});
+
+// Thêm sự kiện cho circle màu yellow
+var yellowCircle = document.querySelector('.circle.yellow');
+yellowCircle.addEventListener('click', function() {
+    filterProductsByColor('yellow'); // Gọi hàm lọc sản phẩm với màu yellow
+});
+// Thêm sự kiện cho circle màu orange
+var orangeCircle = document.querySelector('.circle.orange');
+orangeCircle.addEventListener('click', function() {
+    filterProductsByColor('orange'); // Gọi hàm lọc sản phẩm với màu orange
+});
+
+// Thêm sự kiện cho circle màu pink
+var pinkCircle = document.querySelector('.circle.pink');
+pinkCircle.addEventListener('click', function() {
+    filterProductsByColor('pink'); // Gọi hàm lọc sản phẩm với màu pink
+});
+
+// Thêm sự kiện cho circle màu grey
+var greyCircle = document.querySelector('.circle.grey');
+greyCircle.addEventListener('click', function() {
+    filterProductsByColor('grey'); // Gọi hàm lọc sản phẩm với màu grey
+});
+
+// Thêm sự kiện cho circle màu green
+var greenCircle = document.querySelector('.circle.green');
+greenCircle.addEventListener('click', function() {
+    filterProductsByColor('green'); // Gọi hàm lọc sản phẩm với màu green
+});
+
+// Thêm sự kiện cho circle màu green-yellow
+var greenYellowCircle = document.querySelector('.circle.green-yellow');
+greenYellowCircle.addEventListener('click', function() {
+    filterProductsByColor('green-yellow'); // Gọi hàm lọc sản phẩm với màu green-yellow
+});
+
+// LỌC KÍCH THƯỚC 
+// Thêm sự kiện cho kích thước S
+var sizeSCheckbox = document.querySelector('#checkbox1');
+sizeSCheckbox.addEventListener('change', function() {
+    filterProductsBySize('S'); // Gọi hàm lọc sản phẩm với kích thước S
+});
+
+// Thêm sự kiện cho kích thước M
+var sizeMCheckbox = document.querySelector('#checkbox2');
+sizeMCheckbox.addEventListener('change', function() {
+    filterProductsBySize('M'); // Gọi hàm lọc sản phẩm với kích thước M
+});
+
+// Thêm sự kiện cho kích thước L
+var sizeLCheckbox = document.querySelector('#checkbox3');
+sizeLCheckbox.addEventListener('change', function() {
+    filterProductsBySize('L'); // Gọi hàm lọc sản phẩm với kích thước L
+});
+
+// Thêm sự kiện cho kích thước XL
+var sizeXLCheckbox = document.querySelector('#checkbox4');
+sizeXLCheckbox.addEventListener('change', function() {
+    filterProductsBySize('XL'); // Gọi hàm lọc sản phẩm với kích thước XL
+});
+function filterProductsBySize(size) {
+    var productsList = document.querySelectorAll('.product_content');
+
+    productsList.forEach(function(product) {
+        var productName = product.querySelector('#text').innerText.toLowerCase();
+
+        // Kiểm tra xem tên sản phẩm có chứa từ khóa tương ứng với kích thước không
+        if (productName.includes(size) && (productName.includes('tee') || productName.includes('áo') || productName.includes('hoodie') || productName.includes('shirt') || productName.includes('quần'))) {
+            // Hiển thị sản phẩm
+            product.style.display = 'block';
+        } else {
+            // Ẩn sản phẩm không phù hợp
+            product.style.display = 'none';
+        }
+    });
+}
+//tìm kiếm sản phẩm không phân biệt chữ hoa thường
+        // Bắt sự kiện click vào nút tìm kiếm
+        document.getElementById('searchButton').addEventListener('click', function() {
+            search();
+        });
+
+        // Bắt sự kiện nhấn phím trong ô tìm kiếm
+        document.getElementById('searchInput').addEventListener('input', function() {
+            search();
+        });
+
+        // Hàm tìm kiếm
+
+        function search() {
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            var products = document.querySelectorAll('.product_content');
+
+            products.forEach(function(product) {
+                var productText = product.querySelector('#text').textContent.toLowerCase();
+                var productContainer = product.parentElement;
+
+                if (productText.includes(searchTerm)) {
+                    productContainer.style.display = 'block'; // Hiển thị sản phẩm nếu chứa từ khóa tìm kiếm
+                } else {
+                    productContainer.style.display = 'none'; // Ẩn sản phẩm nếu không chứa từ khóa tìm kiếm
+                }
+            });
+        }
+//SẮP XẾP SẢN PHẨM
+        //Z-A và A_Z
+        document.addEventListener("DOMContentLoaded", function() {
+    const sortLinks = document.querySelectorAll(".cumulus a"); // Chọn tất cả các liên kết sắp xếp
+
+    sortLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+
+            const sortBy = link.textContent.trim(); // Lấy nội dung của liên kết
+            sortProducts(sortBy); // Gọi hàm sắp xếp sản phẩm
+        });
+    });
+
+    function sortProducts(sortBy) {
+        const productsContainer = document.getElementById("productInfo"); // Lấy phần tử chứa sản phẩm
+
+        const products = Array.from(productsContainer.querySelectorAll(".product_content")); // Chọn tất cả các sản phẩm
+
+        products.sort(function(a, b) {
+            const textA = a.querySelector("#text").textContent.trim().toUpperCase();
+            const textB = b.querySelector("#text").textContent.trim().toUpperCase();
+
+            if (sortBy === "Tên : A - Z") {
+                return textA.localeCompare(textB);
+            } else if (sortBy === "Tên : Z - A") {
+                return textB.localeCompare(textA);
+            }
+        });
+
+        // Xóa tất cả sản phẩm hiện tại
+        while (productsContainer.firstChild) {
+            productsContainer.removeChild(productsContainer.firstChild);
+        }
+
+        // Thêm sản phẩm đã sắp xếp vào container
+        products.forEach(function(product) {
+            productsContainer.appendChild(product);
+        });
+    }
+});
+// sắp xếp sản phẩm bán chạy nhất
+document.addEventListener("DOMContentLoaded", function () {
+        var bestsellerLink = document.getElementById("bestseller");
+        var allProducts = document.querySelectorAll(".product_content");
+
+        bestsellerLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            showMiddleFourProducts(); // Gọi hàm để hiển thị bốn sản phẩm ở giữa
+        });
+
+        function showMiddleFourProducts() {
+            var totalProducts = allProducts.length;
+            var startIndex = Math.floor((totalProducts - 4) / 2); // Chỉ số bắt đầu của bốn sản phẩm ở giữa
+            for (var i = 0; i < totalProducts; i++) {
+                if (i >= startIndex && i < startIndex + 4) {
+                    // Hiển thị bốn sản phẩm ở giữa
+                    allProducts[i].style.display = "block";
+                } else {
+                    // Ẩn các sản phẩm còn lại
+                    allProducts[i].style.display = "none";
+                }
+            }
+        }
+    });
+// sắp xếp sản phẩm mới nhất nhất
+document.addEventListener("DOMContentLoaded", function () {
+        var bestsellerLink = document.getElementById("newest");
+        var allProducts = document.querySelectorAll(".product_content");
+
+        bestsellerLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            showMiddleFourProducts(); // Gọi hàm để hiển thị bốn sản phẩm ở giữa
+        });
+
+        function showMiddleFourProducts() {
+            var totalProducts = allProducts.length;
+            var startIndex = Math.floor((totalProducts - 2) / 2); // Chỉ số bắt đầu của bốn sản phẩm ở giữa
+            for (var i = 0; i < totalProducts; i++) {
+                if (i >= startIndex && i < startIndex + 2) {
+                    // Hiển thị bốn sản phẩm ở giữa
+                    allProducts[i].style.display = "block";
+                } else {
+                    // Ẩn các sản phẩm còn lại
+                    allProducts[i].style.display = "none";
+                }
+            }
+        }
+    });
+   //SẮP XẾP GIÁ TĂNG DẦN
+const sortLinks = document.querySelectorAll(".cumulus a"); // Chọn tất cả các liên kết sắp xếp
+
+sortLinks.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+
+        const sortBy = link.textContent.trim(); // Lấy nội dung của liên kết
+        if (sortBy === "Giá : tăng dần") {
+            sortProducts(sortBy); // Gọi hàm sắp xếp sản phẩm chỉ khi người dùng chọn "Giá : tăng dần"
+        }
+    });
+});
+
+function sortProducts(sortBy) {
+    const productsContainer = document.getElementById("productInfo"); // Lấy phần tử chứa sản phẩm
+
+    const products = Array.from(productsContainer.querySelectorAll(".product_content")); // Chọn tất cả các sản phẩm
+
+    products.sort(function(a, b) {
+        const priceA = parseFloat(a.querySelector("#price").textContent.replace("đ", "").replace(",", "").trim());
+        const priceB = parseFloat(b.querySelector("#price").textContent.replace("đ", "").replace(",", "").trim());
+
+        if (sortBy === "Giá : tăng dần") {
+            return priceA - priceB;
+        } else if (sortBy === "Giá : giảm dần") {
+            return priceB - priceA;
+        }
+    });
+
+    // Xóa tất cả sản phẩm hiện tại
+    while (productsContainer.firstChild) {
+        productsContainer.removeChild(productsContainer.firstChild);
+    }
+
+    // Thêm sản phẩm đã sắp xếp vào container
+    products.forEach(function(product) {
+        productsContainer.appendChild(product);
+    });
+    }
+    // sắp xếp sản phẩm mới nhất
+    document.addEventListener("DOMContentLoaded", function () {
+            var newestLink = document.getElementById("newest");
+            var allProducts = document.querySelectorAll(".product_content");
+
+            newestLink.addEventListener("click", function (e) {
+                e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+                toggleProductVisibility(); // Gọi hàm để ẩn các sản phẩm
+            });
+
+            function toggleProductVisibility() {
+                for (var i = 0; i < allProducts.length; i++) {
+                    if (i < 6) {
+                        // Hiển thị ba sản phẩm đầu tiên
+                        allProducts[i].style.display = "block";
+                    } else {
+                        // Ẩn các sản phẩm còn lại
+                        allProducts[i].style.display = "none";
+                    }
+                }
+            }
+        });
+
+
+    </script>
+  </body>
+</html>
+
+
+
+   
